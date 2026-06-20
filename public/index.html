@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Pulse Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>🌐 SocialPulse</h1>
+            <div id="auth-status">Logged in as: <strong id="current-user">Guest</strong></div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+<aside class="sidebar">
+    <div class="profile-card">
+        <div class="avatar">👤</div>
+        <h3 id="profile-name">Rana Ali</h3>
+        <p id="profile-bio">MERN Stack Developer | Exploring IoT Ecosystems</p>
+        
+        <div class="follow-stats" style="display: flex; justify-content: space-around; margin: 1rem 0; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 0.8rem;">
+            <div><strong id="followers-count">0</strong> <span style="color:#666;">Followers</span></div>
+            <div><strong id="following-count">0</strong> <span style="color:#666;">Following</span></div>
+        </div>
+        
+        <button id="follow-toggle-btn" style="width: 100%; background: #007acc; color: white; border: none; padding: 0.5rem; border-radius: 6px; font-weight: 600; cursor: pointer;">
+            Follow Test Account
+        </button>
+    </div>
+</aside>
+        <main class="feed-container">
+            <section class="create-post-box">
+                <textarea id="post-input" placeholder="What's on your mind today? (Max 280 characters)..." maxlength="280"></textarea>
+                <button id="submit-post-btn">Publish Post</button>
+            </section>
+
+            <section class="feed">
+                <h2>Latest Timeline</h2>
+                <div id="posts-timeline">
+                    <div class="loading-placeholder">Loading your timeline feed...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
